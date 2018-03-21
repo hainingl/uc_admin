@@ -20,6 +20,7 @@ CREATE OR REPLACE VIEW vw_berkeley_app_adm_enr AS
   SELECT a.apply_year year,
       a.city city,
       a.school school,
+      a.county country,
       a.val apply,
       m.val admit,
       e.val enroll,
@@ -30,7 +31,7 @@ CREATE OR REPLACE VIEW vw_berkeley_app_adm_enr AS
       on a.apply_year=m.apply_year AND a.school=m.school AND a.city=m.city
       LEFT JOIN  vw_ber_enr e
       ON a.apply_year=e.apply_year AND a.school=e.school AND a.city=e.city
-      GROUP BY 1,2,3,4,5,6
+      GROUP BY 1,2,3,4,5,6,7
  ;
 
 SELECT * FROM vw_berkeley_app_adm_enr;
