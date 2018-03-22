@@ -95,3 +95,9 @@ LOAD DATA LOCAL INFILE '/home/hainingliu/2017_FR_ENR_data.csv' INTO TABLE berkel
     LINES TERMINATED BY '\r\n'
     IGNORE 1 LINES
 ;
+
+LOAD DATA LOCAL INFILE '/home/hainingliu/berk_08_12.csv' INTO TABLE berk
+    FIELDS TERMINATED BY ','
+    ENCLOSED BY '"'
+    IGNORE 1 LINES
+;
