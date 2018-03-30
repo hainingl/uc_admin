@@ -33,7 +33,7 @@ FROM ucsd
 LIMIT 10;
 
 
-drop table ucsd;
+DROP TABLE ucsd;
 
 CREATE TABLE  ucsd (
     df_indx INT,
@@ -47,13 +47,8 @@ CREATE TABLE  ucsd (
     year INT
 ) ;
 
-LOAD DATA LOCAL INFILE '/home/hainingliu/ucla_08_12.csv' INTO TABLE ucsd
-    FIELDS TERMINATED BY ','
-    ENCLOSED BY '"'
-    IGNORE 1 LINES
-;
 
-LOAD DATA LOCAL INFILE '/home/hainingliu/ucla_13_17.csv' INTO TABLE ucsd
+LOAD DATA LOCAL INFILE '/home/hainingliu/ucsd.csv' INTO TABLE ucsd
     FIELDS TERMINATED BY ','
     ENCLOSED BY '"'
     IGNORE 1 LINES
